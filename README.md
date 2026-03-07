@@ -1,46 +1,51 @@
 <div align="center">
 
-<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG1tNjB2Z2N2ZW16NnN3Z2p6YnNqa2lqbmd4M25hZTIwZTI1cWdsYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggCGvnPfa/giphy.gif" width="100%" style="border-radius: 15px; margin-bottom: 20px;">
+<img src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" width="100%" style="border-radius: 15px;">
 
-# Olá, eu sou [SEU NOME AQUI] <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="35px">
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=SEU_USUARIO&label=VISITANTES+NO+MEU+MUNDO&color=00FF00&style=for-the-badge" alt="Contador de Visitas" />
+
+<br><br>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00FF00&center=true&vCenter=true&width=800&lines=System.out.println(%22Full+Stack+Developer%22);while(alive)+{+code();+};Arquitetura+de+Software+%26+Segurança;Amante+da+Lógica+Matemática" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=00FF00&center=true&vCenter=true&width=800&lines=👋+Olá,+eu+sou+[SEU+NOME]!;🚀+Desenvolvedor+Full+Stack;🧠+Arquitetura,+Lógica+e+Matemática;🛡️+Entusiasta+em+Segurança+de+Dados;☕+Transformando+café+em+código+limpo" alt="Typing SVG" />
 </a>
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=50&section=header" width="100%"/>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
-
-### 🚀 Stack Tecnológica
+### 🧩 Meu Arsenal Tecnológico
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50"/> 
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="50" height="50"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="js" width="60" height="60" style="margin-right: 15px;"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="py" width="60" height="60" style="margin-right: 15px;"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="60" height="60" style="margin-right: 15px;"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="node" width="60" height="60" style="margin-right: 15px;"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60" style="margin-right: 15px;"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="60" height="60"/>
 </p>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
-
-### 🏆 Troféus do GitHub (Dinâmicos)
-
-<a href="https://github.com/ryo-ma/github-profile-trophy">
-  <img src="https://github-profile-trophy.vercel.app/?username=SEU_USUARIO&theme=radical&no-frame=true&no-bg=true&margin-w=15" alt="Troféus" />
+<a href="https://github.com/marketplace/actions/readme-quotes">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Citação do Dia" />
 </a>
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=50&section=footer" width="100%"/>
 
-### 📊 Radar de Estatísticas
+### 🕹️ Painel de Controle (Status em Tempo Real)
 
-<img align="left" height="200" src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117"/>
-<img align="right" height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&layout=compact&theme=radical&hide_border=true&bg_color=0D1117"/>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SEU_USUARIO&theme=tokyonight&hide_border=true" width="48%" />
+</p>
 
-<br clear="both">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg">
+</picture>
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+<br><br>
+
+<img src="https://i.pinimg.com/originals/7c/47/43/7c47432f74e69bafb708e3dc16eb0c24.gif" width="100%" height="20px">
 
 </div>
