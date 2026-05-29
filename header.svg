@@ -1,155 +1,252 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 60" width="900" height="60">
-  <!-- TRANSPARENTE — sem fundo sólido -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
   <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="#1e0d04"/>
+      <stop offset="100%" stop-color="#080503"/>
+    </radialGradient>
+    <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c87020" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c87020" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowA" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowG" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowDot" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <style>
-      /* Bolinha de vapor viajando pelo tubo — estilo "cobrinha steampunk" */
-      .piston {
-        animation: travel 6s linear infinite;
-        offset-path: path('M 30,30 L 870,30');
-        offset-rotate: 0deg;
+      .lbl  { animation: blink 6s step-end infinite; }
+      .ttl  { animation: pulse 3s ease-in-out infinite; }
+      .dot  { animation: dpulse 2s ease-in-out infinite; }
+      .steam1 { animation: steamUp 4s ease-in-out infinite; }
+      .steam2 { animation: steamUp 4s ease-in-out infinite 1.3s; }
+      .steam3 { animation: steamUp 4s ease-in-out infinite 2.6s; }
+      .scanline { animation: scan 8s linear infinite; }
+      @keyframes blink  { 0%,88%,100%{opacity:1} 90%{opacity:.08} 94%{opacity:1} 97%{opacity:.2} }
+      @keyframes pulse  { 0%,100%{opacity:.7} 50%{opacity:1} }
+      @keyframes dpulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+      @keyframes steamUp {
+        0%   { opacity:0; transform:translateY(0) scaleX(1); }
+        20%  { opacity:.55; }
+        70%  { opacity:.25; transform:translateY(-38px) scaleX(1.6); }
+        100% { opacity:0;  transform:translateY(-60px) scaleX(.4); }
       }
-      .piston2 {
-        animation: travel2 6s linear infinite 3s;
-        offset-path: path('M 870,30 L 30,30');
-        offset-rotate: 0deg;
-      }
-      /* Partícula de calor/faísca */
-      .spark1 { animation: travel 9s linear infinite 1s; offset-path: path('M 30,30 L 870,30'); }
-      .spark2 { animation: travel2 9s linear infinite 4s; offset-path: path('M 870,30 L 30,30'); }
-
-      @keyframes travel {
-        0%   { offset-distance: 0%;   opacity: 0; }
-        5%   { opacity: 1; }
-        95%  { opacity: 1; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-      @keyframes travel2 {
-        0%   { offset-distance: 0%;   opacity: 0; }
-        5%   { opacity: .7; }
-        95%  { opacity: .7; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-
-      /* Engrenagens dos lados */
-      .gL  { animation: spinCW  8s linear infinite; transform-origin: 30px 30px; }
-      .gLs { animation: spinCCW 5s linear infinite; transform-origin: 74px 30px; }
-      .gR  { animation: spinCCW 8s linear infinite; transform-origin: 870px 30px; }
-      .gRs { animation: spinCW  5s linear infinite; transform-origin: 826px 30px; }
-      .gM  { animation: spinCCW 7s linear infinite; transform-origin: 450px 30px; }
-
-      @keyframes spinCW  { to { transform: rotate(360deg);  } }
-      @keyframes spinCCW { to { transform: rotate(-360deg); } }
-
-      /* Pressão pulsando no tubo central */
-      .pulse { animation: pressurePulse 3s ease-in-out infinite; }
-      @keyframes pressurePulse {
-        0%,100% { stroke-opacity: .35; }
-        50%     { stroke-opacity: .7; }
+      @keyframes scan {
+        0%   { transform:translateY(-10px); opacity:.13; }
+        50%  { opacity:.06; }
+        100% { transform:translateY(320px); opacity:.13; }
       }
     </style>
+    <!-- Scanline clip -->
+    <clipPath id="svgClip"><rect width="900" height="320"/></clipPath>
   </defs>
 
-  <!-- TUBO PRINCIPAL — sem fundo, apenas o tubo -->
-  <rect x="30" y="22" width="840" height="16" rx="8" fill="#0d0602" stroke="#2e1506" stroke-width="1.5"/>
-  <!-- Reflexo metálico no topo do tubo -->
-  <rect x="32" y="23" width="836" height="5" rx="2.5" fill="#3a1a08" opacity="0.6"/>
-  <!-- Pulso de pressão -->
-  <rect x="30" y="22" width="840" height="16" rx="8" fill="none"
-    stroke="#b5520a" stroke-width="1" class="pulse"/>
+  <!-- BG -->
+  <rect width="900" height="320" fill="url(#bgGrad)"/>
+  <!-- Warm center radial -->
+  <rect width="900" height="320" fill="url(#glowCenter)"/>
+  <!-- Subtle scanline sweep -->
+  <rect clip-path="url(#svgClip)" x="0" y="0" width="900" height="18" rx="0"
+    fill="none" stroke="#c87020" stroke-width="18" stroke-opacity="0.035" class="scanline"/>
 
-  <!-- Parafusos de reforço ao longo do tubo -->
-  <circle cx="160" cy="30" r="4" fill="#1a0a03" stroke="#3a1a08" stroke-width="1"/>
-  <circle cx="160" cy="30" r="1.5" fill="#5a2a10"/>
-  <circle cx="300" cy="30" r="4" fill="#1a0a03" stroke="#3a1a08" stroke-width="1"/>
-  <circle cx="300" cy="30" r="1.5" fill="#5a2a10"/>
-  <circle cx="600" cy="30" r="4" fill="#1a0a03" stroke="#3a1a08" stroke-width="1"/>
-  <circle cx="600" cy="30" r="1.5" fill="#5a2a10"/>
-  <circle cx="740" cy="30" r="4" fill="#1a0a03" stroke="#3a1a08" stroke-width="1"/>
-  <circle cx="740" cy="30" r="1.5" fill="#5a2a10"/>
+  <!-- OUTER BORDERS — two-layer frame -->
+  <rect x="3"  y="3"  width="894" height="314" fill="none" stroke="#3a1a06" stroke-width="2"/>
+  <rect x="8"  y="8"  width="884" height="304" fill="none" stroke="#1e0d04" stroke-width="1"/>
+  <!-- Inner accent line -->
+  <rect x="14" y="14" width="872" height="292" fill="none" stroke="#2e1506" stroke-width=".8" stroke-dasharray="4 6"/>
 
-  <!-- ─── ENGRENAGEM ESQUERDA grande ─── -->
-  <g class="gL">
-    <circle cx="30" cy="30" r="22" fill="#0d0802" stroke="#2e1506" stroke-width="6" stroke-dasharray="5.5 3"/>
-    <circle cx="30" cy="30" r="16" fill="none" stroke="#3a1a08" stroke-width="1.5"/>
-    <line x1="8"  y1="30" x2="52" y2="30" stroke="#2e1506" stroke-width="2"/>
-    <line x1="30" y1="8"  x2="30" y2="52" stroke="#2e1506" stroke-width="2"/>
-    <line x1="14" y1="14" x2="46" y2="46" stroke="#2e1506" stroke-width="1"/>
-    <line x1="46" y1="14" x2="14" y2="46" stroke="#2e1506" stroke-width="1"/>
-    <circle cx="30" cy="30" r="5"  fill="#2e1506"/>
-    <circle cx="30" cy="30" r="2.5" fill="#c87020"/>
+  <!-- TOP PIPE STRIP -->
+  <rect x="0"   y="0"  width="900" height="10" fill="#0d0602"/>
+  <rect x="2"   y="1"  width="896" height="5" rx="2.5" fill="#2a1205"/>
+  <rect x="0" y="307" width="900" height="13" fill="#0d0602"/>
+  <rect x="2" y="308" width="896" height="5" rx="2.5" fill="#2a1205"/>
+
+  <!-- Corner RIVETS (double ring) -->
+  <circle cx="22" cy="22" r="7"   fill="#1a0a03"/>
+  <circle cx="22" cy="22" r="5.5" fill="#3a1a08" stroke="#5a2a10" stroke-width="1"/>
+  <circle cx="22" cy="22" r="2.5" fill="#c87020"/>
+  <circle cx="878" cy="22" r="7"   fill="#1a0a03"/>
+  <circle cx="878" cy="22" r="5.5" fill="#3a1a08" stroke="#5a2a10" stroke-width="1"/>
+  <circle cx="878" cy="22" r="2.5" fill="#c87020"/>
+  <circle cx="22" cy="298" r="7"   fill="#1a0a03"/>
+  <circle cx="22" cy="298" r="5.5" fill="#3a1a08" stroke="#5a2a10" stroke-width="1"/>
+  <circle cx="22" cy="298" r="2.5" fill="#c87020"/>
+  <circle cx="878" cy="298" r="7"   fill="#1a0a03"/>
+  <circle cx="878" cy="298" r="5.5" fill="#3a1a08" stroke="#5a2a10" stroke-width="1"/>
+  <circle cx="878" cy="298" r="2.5" fill="#c87020"/>
+  <!-- Mid-edge rivets -->
+  <circle cx="450" cy="6"   r="3" fill="#5a2a10"/>
+  <circle cx="450" cy="314" r="3" fill="#5a2a10"/>
+
+  <!-- ─── GEAR 1 large LEFT CW ─── -->
+  <g transform="translate(76,160)">
+    <g filter="url(#glowG)">
+      <circle r="70"  fill="#0d0802" stroke="#2e1506" stroke-width="14" stroke-dasharray="14 6"/>
+      <circle r="56"  fill="none"   stroke="#4a2810" stroke-width="2.5"/>
+      <circle r="36"  fill="none"   stroke="#2e1506" stroke-width="9"  stroke-dasharray="8 4"/>
+      <line x1="-56" y1="0" x2="56" y2="0" stroke="#2e1506" stroke-width="3"/>
+      <line x1="0" y1="-56" x2="0" y2="56" stroke="#2e1506" stroke-width="3"/>
+      <line x1="-40" y1="-40" x2="40" y2="40" stroke="#2e1506" stroke-width="1.5"/>
+      <line x1="40"  y1="-40" x2="-40" y2="40" stroke="#2e1506" stroke-width="1.5"/>
+      <circle r="11" fill="#3a1a08"/>
+      <circle r="5"  fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="22s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- ─── ENGRENAGEM ESQUERDA pequena ─── -->
-  <g class="gLs">
-    <circle cx="74" cy="30" r="16" fill="#0d0802" stroke="#2e1506" stroke-width="4" stroke-dasharray="4 2.5"/>
-    <circle cx="74" cy="30" r="11" fill="none" stroke="#3a1a08" stroke-width="1.2"/>
-    <line x1="58" y1="30" x2="90" y2="30" stroke="#2e1506" stroke-width="1.5"/>
-    <line x1="74" y1="14" x2="74" y2="46" stroke="#2e1506" stroke-width="1.5"/>
-    <circle cx="74" cy="30" r="3.5" fill="#2e1506"/>
-    <circle cx="74" cy="30" r="1.8" fill="#b5520a"/>
+  <!-- ─── GEAR 2 small top-left CCW ─── -->
+  <g transform="translate(170,74)">
+    <g>
+      <circle r="38" fill="#0d0802" stroke="#2e1506" stroke-width="9" stroke-dasharray="10 5"/>
+      <circle r="29" fill="none"   stroke="#4a2810" stroke-width="2"/>
+      <circle r="18" fill="none"   stroke="#2e1506" stroke-width="6" stroke-dasharray="5 2.5"/>
+      <line x1="-29" y1="0" x2="29" y2="0" stroke="#2e1506" stroke-width="2.5"/>
+      <line x1="0" y1="-29" x2="0" y2="29" stroke="#2e1506" stroke-width="2.5"/>
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#2e1506" stroke-width="1.5"/>
+      <line x1="20"  y1="-20" x2="-20" y2="20" stroke="#2e1506" stroke-width="1.5"/>
+      <circle r="7"  fill="#3a1a08"/>
+      <circle r="3"  fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="-360" dur="13s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <!-- shaft G1-G2 -->
+  <rect x="124" y="106" width="28" height="8" rx="4" fill="#2e1506"/>
+  <rect x="124" y="108" width="28" height="4" rx="2" fill="#4a2810"/>
+
+  <!-- ─── GEAR 3 small bottom-left CW ─── -->
+  <g transform="translate(162,248)">
+    <g>
+      <circle r="32" fill="#0d0802" stroke="#2e1506" stroke-width="8" stroke-dasharray="8 4"/>
+      <circle r="24" fill="none"   stroke="#4a2810" stroke-width="1.5"/>
+      <line x1="-24" y1="0" x2="24" y2="0" stroke="#2e1506" stroke-width="2"/>
+      <line x1="0" y1="-24" x2="0" y2="24" stroke="#2e1506" stroke-width="2"/>
+      <circle r="6"  fill="#3a1a08"/>
+      <circle r="2.5" fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="16s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- ─── ENGRENAGEM CENTRO ─── -->
-  <g class="gM">
-    <circle cx="450" cy="30" r="24" fill="#0d0802" stroke="#4a2810" stroke-width="7" stroke-dasharray="6 3"/>
-    <circle cx="450" cy="30" r="17" fill="none" stroke="#3a1a08" stroke-width="2"/>
-    <line x1="426" y1="30" x2="474" y2="30" stroke="#2e1506" stroke-width="2"/>
-    <line x1="450" y1="6"  x2="450" y2="54" stroke="#2e1506" stroke-width="2"/>
-    <line x1="433" y1="13" x2="467" y2="47" stroke="#2e1506" stroke-width="1"/>
-    <line x1="467" y1="13" x2="433" y2="47" stroke="#2e1506" stroke-width="1"/>
-    <circle cx="450" cy="30" r="6"   fill="#3a1a08"/>
-    <circle cx="450" cy="30" r="2.8" fill="#c87020"/>
+  <!-- STEAM puffs from top-left gear -->
+  <ellipse class="steam1" cx="170" cy="36" rx="10" ry="5" fill="#a07840" opacity="0"/>
+  <ellipse class="steam2" cx="162" cy="34" rx="7"  ry="4" fill="#a07840" opacity="0"/>
+  <ellipse class="steam3" cx="178" cy="38" rx="8"  ry="4" fill="#a07840" opacity="0"/>
+
+  <!-- ─── GEAR 4 large RIGHT CCW ─── -->
+  <g transform="translate(824,160)">
+    <g filter="url(#glowG)">
+      <circle r="70"  fill="#0d0802" stroke="#2e1506" stroke-width="14" stroke-dasharray="14 6"/>
+      <circle r="56"  fill="none"   stroke="#4a2810" stroke-width="2.5"/>
+      <circle r="36"  fill="none"   stroke="#2e1506" stroke-width="9"  stroke-dasharray="8 4"/>
+      <line x1="-56" y1="0" x2="56" y2="0" stroke="#2e1506" stroke-width="3"/>
+      <line x1="0" y1="-56" x2="0" y2="56" stroke="#2e1506" stroke-width="3"/>
+      <line x1="-40" y1="-40" x2="40" y2="40" stroke="#2e1506" stroke-width="1.5"/>
+      <line x1="40"  y1="-40" x2="-40" y2="40" stroke="#2e1506" stroke-width="1.5"/>
+      <circle r="11" fill="#3a1a08"/>
+      <circle r="5"  fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="-360" dur="22s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- ─── ENGRENAGEM DIREITA pequena ─── -->
-  <g class="gRs">
-    <circle cx="826" cy="30" r="16" fill="#0d0802" stroke="#2e1506" stroke-width="4" stroke-dasharray="4 2.5"/>
-    <circle cx="826" cy="30" r="11" fill="none" stroke="#3a1a08" stroke-width="1.2"/>
-    <line x1="810" y1="30" x2="842" y2="30" stroke="#2e1506" stroke-width="1.5"/>
-    <line x1="826" y1="14" x2="826" y2="46" stroke="#2e1506" stroke-width="1.5"/>
-    <circle cx="826" cy="30" r="3.5" fill="#2e1506"/>
-    <circle cx="826" cy="30" r="1.8" fill="#b5520a"/>
+  <!-- ─── GEAR 5 small top-right CW ─── -->
+  <g transform="translate(730,74)">
+    <g>
+      <circle r="38" fill="#0d0802" stroke="#2e1506" stroke-width="9" stroke-dasharray="10 5"/>
+      <circle r="29" fill="none"   stroke="#4a2810" stroke-width="2"/>
+      <circle r="18" fill="none"   stroke="#2e1506" stroke-width="6" stroke-dasharray="5 2.5"/>
+      <line x1="-29" y1="0" x2="29" y2="0" stroke="#2e1506" stroke-width="2.5"/>
+      <line x1="0" y1="-29" x2="0" y2="29" stroke="#2e1506" stroke-width="2.5"/>
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#2e1506" stroke-width="1.5"/>
+      <line x1="20"  y1="-20" x2="-20" y2="20" stroke="#2e1506" stroke-width="1.5"/>
+      <circle r="7"  fill="#3a1a08"/>
+      <circle r="3"  fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="360" dur="13s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <!-- shaft G4-G5 -->
+  <rect x="748" y="106" width="28" height="8" rx="4" fill="#2e1506"/>
+  <rect x="748" y="108" width="28" height="4" rx="2" fill="#4a2810"/>
+
+  <!-- ─── GEAR 6 small bottom-right CCW ─── -->
+  <g transform="translate(738,248)">
+    <g>
+      <circle r="32" fill="#0d0802" stroke="#2e1506" stroke-width="8" stroke-dasharray="8 4"/>
+      <circle r="24" fill="none"   stroke="#4a2810" stroke-width="1.5"/>
+      <line x1="-24" y1="0" x2="24" y2="0" stroke="#2e1506" stroke-width="2"/>
+      <line x1="0" y1="-24" x2="0" y2="24" stroke="#2e1506" stroke-width="2"/>
+      <circle r="6"  fill="#3a1a08"/>
+      <circle r="2.5" fill="#b5520a"/>
+      <animateTransform attributeName="transform" type="rotate"
+        from="0" to="-360" dur="16s" repeatCount="indefinite"/>
+    </g>
   </g>
 
-  <!-- ─── ENGRENAGEM DIREITA grande ─── -->
-  <g class="gR">
-    <circle cx="870" cy="30" r="22" fill="#0d0802" stroke="#2e1506" stroke-width="6" stroke-dasharray="5.5 3"/>
-    <circle cx="870" cy="30" r="16" fill="none" stroke="#3a1a08" stroke-width="1.5"/>
-    <line x1="848" y1="30" x2="892" y2="30" stroke="#2e1506" stroke-width="2"/>
-    <line x1="870" y1="8"  x2="870" y2="52" stroke="#2e1506" stroke-width="2"/>
-    <line x1="854" y1="14" x2="886" y2="46" stroke="#2e1506" stroke-width="1"/>
-    <line x1="886" y1="14" x2="854" y2="46" stroke="#2e1506" stroke-width="1"/>
-    <circle cx="870" cy="30" r="5"   fill="#2e1506"/>
-    <circle cx="870" cy="30" r="2.5" fill="#c87020"/>
-  </g>
+  <!-- STEAM puffs from top-right gear -->
+  <ellipse class="steam1" cx="730" cy="36" rx="10" ry="5" fill="#a07840" opacity="0"/>
+  <ellipse class="steam2" cx="722" cy="34" rx="7"  ry="4" fill="#a07840" opacity="0"/>
+  <ellipse class="steam3" cx="738" cy="38" rx="8"  ry="4" fill="#a07840" opacity="0"/>
 
-  <!-- ─── PISTÃO animado (cobrinha steampunk) ─── -->
-  <!-- Vai da esquerda para direita -->
-  <g class="piston">
-    <!-- Corpo do pistão -->
-    <rect x="-14" y="-5" width="28" height="10" rx="5" fill="#3a1a08" stroke="#b5520a" stroke-width="1.2"/>
-    <!-- Janela de pressão (brilha) -->
-    <rect x="-8"  y="-2" width="16" height="4"  rx="2" fill="#c87020" opacity="0.7"/>
-    <!-- Cauda de vapor -->
-    <ellipse cx="-22" cy="0" rx="10" ry="4" fill="#8a6030" opacity="0.3"/>
-    <ellipse cx="-34" cy="0" rx="7"  ry="3" fill="#8a6030" opacity="0.15"/>
-  </g>
+  <!-- ═══════════════ CENTER TEXT ═══════════════ -->
+  <!-- Blinking top label -->
+  <text x="450" y="112" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="10" fill="#6a3a10" letter-spacing="6" class="lbl">&#9672; ENGINE INITIALIZED &#9672;</text>
 
-  <!-- Volta da direita para esquerda (mais suave) -->
-  <g class="piston2">
-    <rect x="-14" y="-4" width="28" height="8" rx="4" fill="#2e1506" stroke="#7a3a10" stroke-width="1"/>
-    <rect x="-7"  y="-1.5" width="14" height="3" rx="1.5" fill="#a07020" opacity="0.5"/>
-    <ellipse cx="22" cy="0" rx="9" ry="3" fill="#7a5030" opacity="0.2"/>
-  </g>
+  <!-- Main title — glowing brass -->
+  <text x="450" y="172" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="46" font-weight="bold"
+    fill="#e8b520" filter="url(#glowA)" class="ttl">THE BRASS WORKSHOP</text>
 
-  <!-- Faísca/partícula menor -->
-  <g class="spark1">
-    <circle cx="0" cy="0" r="2.5" fill="#e8b520" opacity="0.9"/>
-    <circle cx="0" cy="0" r="5"   fill="#e8b520" opacity="0.2"/>
-  </g>
-  <g class="spark2">
-    <circle cx="0" cy="0" r="1.8" fill="#ff8c00" opacity="0.7"/>
-    <circle cx="0" cy="0" r="4"   fill="#ff8c00" opacity="0.15"/>
-  </g>
+  <!-- Sub shadow layer for depth -->
+  <text x="452" y="174" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="46" font-weight="bold"
+    fill="#3a1a00" opacity="0.4">THE BRASS WORKSHOP</text>
+
+  <!-- Name -->
+  <text x="450" y="207" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="12" fill="#c87820" letter-spacing="5">RONALDO DA SILVA MENDON&#199;A J&#218;NIOR</text>
+
+  <!-- Decorative divider with diamond -->
+  <line x1="250" y1="222" x2="420" y2="222" stroke="#3a1a06" stroke-width="1"/>
+  <line x1="480" y1="222" x2="650" y2="222" stroke="#3a1a06" stroke-width="1"/>
+  <polygon points="445,218 455,218 455,226 445,226" fill="#b5520a"/>
+  <circle cx="440" cy="222" r="2" fill="#7a3a10"/>
+  <circle cx="460" cy="222" r="2" fill="#7a3a10"/>
+  <circle cx="250" cy="222" r="3" fill="#3a1a06"/>
+  <circle cx="650" cy="222" r="3" fill="#3a1a06"/>
+
+  <!-- Tagline -->
+  <text x="450" y="243" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11" fill="#c8950a" letter-spacing="3">Student &#183; Developer &#183; Systems Builder</text>
+
+  <!-- Status bar -->
+  <rect x="305" y="262" width="290" height="28" rx="4" fill="#080402" stroke="#2e1506" stroke-width="1"/>
+  <rect x="305" y="262" width="290" height="28" rx="4" fill="none" stroke="#1e0d04" stroke-width="1" stroke-dasharray="2 4"/>
+  <!-- Blinking green dot with glow -->
+  <circle cx="326" cy="276" r="5" fill="#00cc33" filter="url(#glowDot)" class="dot"/>
+  <text x="455" y="280" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="9" fill="#6a5020" letter-spacing="3">ALL SYSTEMS OPERATIONAL</text>
+
+  <!-- Bottom pipe coupling ornament -->
+  <rect x="190" y="308" width="520" height="8" rx="4" fill="#1a0a03" opacity="0.8"/>
+  <circle cx="190" cy="312" r="4" fill="#3a1a08"/>
+  <circle cx="710" cy="312" r="4" fill="#3a1a08"/>
+  <circle cx="450" cy="312" r="5" fill="#3a1a08"/>
+  <circle cx="450" cy="312" r="2.5" fill="#5a2a10"/>
 
 </svg>
