@@ -2,7 +2,9 @@
   <img src="header.svg" width="100%" alt="The Brass Workshop — Ronaldo Mendonça"/>
 </div>
 
-<br/>
+<div align="center">
+  <img src="divider.svg" width="100%" alt=""/>
+</div>
 
 <div align="center">
 
@@ -27,7 +29,7 @@
 
 <br/>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="28"/> &nbsp;TECH ARSENAL
+## ⚙ &nbsp;TECH ARSENAL
 
 <div align="center">
 
@@ -53,7 +55,7 @@
 
 <br/>
 
-## ⚙ PROJECT FORGE
+## ⚙ &nbsp;PROJECT FORGE
 
 <div align="center">
 
@@ -74,7 +76,7 @@
 
 <br/>
 
-## ⚙ REACTOR CORE — GitHub Stats
+## ⚙ &nbsp;REACTOR CORE — GitHub Stats
 
 <div align="center">
 
@@ -92,7 +94,7 @@
 
 <br/>
 
-## 📡 NETWORK TERMINAL
+## 📡 &nbsp;NETWORK TERMINAL
 
 <div align="center">
 
