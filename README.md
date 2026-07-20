@@ -96,8 +96,8 @@ Comecei mexendo com hardware e suporte (daí o técnico em Informática) e fui m
 #### ✦ telemetria
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=ronaldoribeirosm&show_icons=true&count_private=true&bg_color=0a0518&title_color=b9a6ff&text_color=cdbfff&icon_color=8ad6ff&border_color=3d2570&hide_border=false" width="49%" alt="GitHub Stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ronaldoribeirosm&layout=compact&bg_color=0a0518&title_color=b9a6ff&text_color=cdbfff&border_color=3d2570&hide_border=false" width="35%" alt="Top Languages"/>
+<img src="https://ronaldo-readme-stats.vercel.app/api?username=ronaldoribeirosm&show_icons=true&count_private=true&bg_color=0a0518&title_color=b9a6ff&text_color=cdbfff&icon_color=8ad6ff&border_color=3d2570&hide_border=false" width="49%" alt="GitHub Stats"/>
+<img src="https://ronaldo-readme-stats.vercel.app/api/top-langs/?username=ronaldoribeirosm&layout=compact&bg_color=0a0518&title_color=b9a6ff&text_color=cdbfff&border_color=3d2570&hide_border=false" width="35%" alt="Top Languages"/>
 </p>
 
 <p align="center">
