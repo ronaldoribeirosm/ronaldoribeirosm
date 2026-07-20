@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" shape-rendering="crispEdges">
+  <defs>
+    <radialGradient id="visorGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3a2570"/>
+      <stop offset="70%" stop-color="#0d0620"/>
+      <stop offset="100%" stop-color="#05030c"/>
+    </radialGradient>
+    <style>
+      @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+      @keyframes glint { 0%,100%{opacity:.15} 50%{opacity:.85} }
+      #ring{transform-origin:110px 106px; animation:spin 9s linear infinite}
+      #shine{animation:glint 2.6s ease-in-out infinite}
+    </style>
+  </defs>
+
+  <!-- helmet shell -->
+  <rect x="70.0" y="22.0" width="80.0" height="8" fill="#241448"/>
+<rect x="58.0" y="30.0" width="104.0" height="8" fill="#241448"/>
+<rect x="46.0" y="38.0" width="128.0" height="8" fill="#241448"/>
+<rect x="38.0" y="46.0" width="144.0" height="8" fill="#241448"/>
+<rect x="34.0" y="54.0" width="152.0" height="8" fill="#241448"/>
+<rect x="26.0" y="62.0" width="168.0" height="8" fill="#241448"/>
+<rect x="22.0" y="70.0" width="176.0" height="8" fill="#241448"/>
+<rect x="18.0" y="78.0" width="184.0" height="8" fill="#241448"/>
+<rect x="18.0" y="86.0" width="184.0" height="8" fill="#241448"/>
+<rect x="14.0" y="94.0" width="192.0" height="8" fill="#241448"/>
+<rect x="14.0" y="102.0" width="192.0" height="8" fill="#241448"/>
+<rect x="14.0" y="110.0" width="192.0" height="8" fill="#241448"/>
+<rect x="14.0" y="118.0" width="192.0" height="8" fill="#241448"/>
+<rect x="14.0" y="126.0" width="192.0" height="8" fill="#241448"/>
+<rect x="18.0" y="134.0" width="184.0" height="8" fill="#241448"/>
+<rect x="18.0" y="142.0" width="184.0" height="8" fill="#241448"/>
+<rect x="22.0" y="150.0" width="176.0" height="8" fill="#241448"/>
+<rect x="26.0" y="158.0" width="168.0" height="8" fill="#241448"/>
+<rect x="34.0" y="166.0" width="152.0" height="8" fill="#241448"/>
+<rect x="38.0" y="174.0" width="144.0" height="8" fill="#241448"/>
+<rect x="46.0" y="182.0" width="128.0" height="8" fill="#241448"/>
+<rect x="58.0" y="190.0" width="104.0" height="8" fill="#241448"/>
+<rect x="70.0" y="198.0" width="80.0" height="8" fill="#241448"/>
+
+  <rect x="74.0" y="30.0" width="72.0" height="8" fill="#160b30"/>
+<rect x="58.0" y="38.0" width="104.0" height="8" fill="#160b30"/>
+<rect x="50.0" y="46.0" width="120.0" height="8" fill="#160b30"/>
+<rect x="42.0" y="54.0" width="136.0" height="8" fill="#160b30"/>
+<rect x="38.0" y="62.0" width="144.0" height="8" fill="#160b30"/>
+<rect x="30.0" y="70.0" width="160.0" height="8" fill="#160b30"/>
+<rect x="30.0" y="78.0" width="160.0" height="8" fill="#160b30"/>
+<rect x="26.0" y="86.0" width="168.0" height="8" fill="#160b30"/>
+<rect x="22.0" y="94.0" width="176.0" height="8" fill="#160b30"/>
+<rect x="22.0" y="102.0" width="176.0" height="8" fill="#160b30"/>
+<rect x="22.0" y="110.0" width="176.0" height="8" fill="#160b30"/>
+<rect x="22.0" y="118.0" width="176.0" height="8" fill="#160b30"/>
+<rect x="22.0" y="126.0" width="176.0" height="8" fill="#160b30"/>
+<rect x="26.0" y="134.0" width="168.0" height="8" fill="#160b30"/>
+<rect x="30.0" y="142.0" width="160.0" height="8" fill="#160b30"/>
+<rect x="30.0" y="150.0" width="160.0" height="8" fill="#160b30"/>
+<rect x="38.0" y="158.0" width="144.0" height="8" fill="#160b30"/>
+<rect x="42.0" y="166.0" width="136.0" height="8" fill="#160b30"/>
+<rect x="50.0" y="174.0" width="120.0" height="8" fill="#160b30"/>
+<rect x="58.0" y="182.0" width="104.0" height="8" fill="#160b30"/>
+<rect x="74.0" y="190.0" width="72.0" height="8" fill="#160b30"/>
+
+
+  <!-- visor -->
+  <circle cx="110" cy="106" r="62" fill="url(#visorGlow)"/>
+  <g id="ring">
+    <circle cx="110" cy="106" r="34" fill="none" stroke="#8a5cff" stroke-width="4" stroke-dasharray="6 5" opacity="0.85"/>
+  </g>
+  <circle cx="110" cy="106" r="12" fill="#020103"/>
+  <rect x="105.8" y="113.2" width="2" height="2" fill="#cdbfff" opacity="0.66"/>
+<rect x="94.6" y="87.0" width="2" height="2" fill="#cdbfff" opacity="0.77"/>
+<rect x="135.7" y="110.7" width="2" height="2" fill="#cdbfff" opacity="0.89"/>
+<rect x="105.6" y="90.8" width="2" height="2" fill="#cdbfff" opacity="1.00"/>
+<rect x="99.0" y="85.0" width="2" height="2" fill="#cdbfff" opacity="0.88"/>
+<rect x="114.8" y="113.8" width="2" height="2" fill="#cdbfff" opacity="0.59"/>
+<rect x="118.1" y="108.6" width="2" height="2" fill="#cdbfff" opacity="0.91"/>
+<rect x="89.9" y="105.7" width="2" height="2" fill="#cdbfff" opacity="0.84"/>
+<rect x="132.0" y="93.0" width="2" height="2" fill="#cdbfff" opacity="0.94"/>
+<rect x="130.9" y="108.1" width="2" height="2" fill="#cdbfff" opacity="0.92"/>
+
+  <rect id="shine" x="76" y="72" width="10" height="10" fill="#ffffff"/>
+
+  <!-- visor rim -->
+  <rect x="83.0" y="49.0" width="54.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="74.0" y="55.0" width="72.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="65.0" y="61.0" width="90.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="62.0" y="67.0" width="96.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="56.0" y="73.0" width="108.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="53.0" y="79.0" width="114.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="50.0" y="85.0" width="120.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="50.0" y="91.0" width="120.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="47.0" y="97.0" width="126.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="47.0" y="103.0" width="126.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="47.0" y="109.0" width="126.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="47.0" y="115.0" width="126.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="50.0" y="121.0" width="120.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="50.0" y="127.0" width="120.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="53.0" y="133.0" width="114.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="56.0" y="139.0" width="108.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="62.0" y="145.0" width="96.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="65.0" y="151.0" width="90.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="74.0" y="157.0" width="72.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+<rect x="83.0" y="163.0" width="54.0" height="6" fill="none" stroke-opacity="0.5" stroke="#b9a6ff" stroke-width="0.6"/>
+
+
+  <!-- antenna -->
+  <rect x="170" y="18" width="6" height="18" fill="#6a3fd1"/>
+  <rect x="167" y="10" width="12" height="8" fill="#ff8c9e"/>
+
+  <!-- suit collar -->
+  <rect x="40" y="188" width="140" height="26" fill="#1a1033"/>
+  <rect x="40" y="188" width="140" height="6" fill="#6a3fd1"/>
+</svg>
