@@ -105,7 +105,7 @@ Comecei mexendo com hardware e suporte (daí o técnico em Informática) e fui m
 </p>
 
 <p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=ronaldoribeirosm&theme=discord&no-frame=true&margin-w=8&row=2&column=4" width="90%" alt="trophies"/>
+<img src="https://ronaldo-activity-graph.vercel.app/graph?username=ronaldoribeirosm&bg_color=0a0518&color=cdbfff&line=8ad6ff&point=b9a6ff&area=true&border_color=3d2570&hide_border=false" width="90%" alt="activity graph"/>
 </p>
 
 <details>
